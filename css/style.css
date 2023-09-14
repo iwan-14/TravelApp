@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 3rem;
+    backdrop-filter: blur(3px);
+}
+
+.nav .navbar-brand{
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+}
+
+.nav .navbar-nav{
+    display: flex;
+    gap: 3rem;
+    font-weight: 600;
+}
+
+.nav .navbar-nav a{
+    color: white;
+}
+
+.nav .navbar-nav a::after{
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid black; 
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.nav .navbar-nav a:hover::after{
+    transform: scaleX(1);
+}
+
+#hamburger-menu{
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.home{
+    background-image: url(/img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home .home-shadow{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%)
+}
+
+.home .home-title{
+    width: 100%;
+    padding: 3rem;
+    color: white;
+}
+
+.home .home-title .title{
+    font-size: 2rem;
+}
+
+.home .home-title .title .text-title{
+    margin-bottom: 1rem;
+}
+
+.home .home-title .title .sub-text{
+    margin-bottom: 1rem;
+}
+
+.cta{
+    padding: 1rem 3rem;
+    margin: 1rem 0;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.home-featured .img-featured .home-featured-shadow{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 9%, rgba(255, 255, 255, 0) 60%);
+}
+
+
+.home-featured{
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-featured .featured-header{
+    color: white;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.home-featured .img-featured{
+    position: relative;
+}
+
+
+.home-featured .img-featured .featured{
+    width: 100%;
+    height: 300px;
+    padding: 0.5rem;
+    transition: transform 0.5s;
+}
+
+.home-featured .img-featured .featured:hover{
+    transform: scale(1.05);
+}
+
+
+.home-featured .featured-title{
+    color: white;
+    padding: 1rem;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+}
+
+.about-card{
+    padding: 8rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.about-card .about-card-left{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.about-card .about-card-left .about-img{
+    width: 500px;
+}
+.about-card .about-card-right{
+    font-size: 16px;
+    padding: 1rem;
+}
+.about-card .about-card-right .about-title{
+    color: white;
+    font-weight: 500;
+}
+
+.about-card .about-card-left .about-card-shadow{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 9%, rgba(255, 255, 255, 0) 60%);
+}
+
+.explore-card{
+    padding: 7rem;
+}
+
+.explore-card .img-explore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.explore-card .img-explore .featured-explore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+}
+.explore-card .featured-title{
+    color: white;
+    font-size: 3rem;
+    padding: 5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.explore-card .img-explore .explore-shadow{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 9%, rgba(255, 255, 255, 0) 60%);
+}
+
+.explore-card .img-explore .explore-shadow-top{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(1, 1, 3, 1) 9%, rgba(255, 255, 255, 0) 60%);
+}
+
+.contact-card{
+    display: flex;
+    padding: 8rem;
+    align-items: center;
+}
+
+.contact-card .contact-left{
+    color: white;
+    padding: 1rem;
+}
+
+.contact-card .contact-left .title-contact{
+    margin: 0 0 1rem;
+    font-weight: 700;
+}
+
+.contact-card .contact-left .text-contact{
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+}
+
+.contact-card .contact-left form{
+    display: grid;
+    width: 200px;
+}
+
+.contact-card .contact-left form input{
+    border: none;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.contact-card .contact-right{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-card .contact-right .contact-img{
+    width: 500px;
+}
+.contact-card .contact-right .contact-shadow{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 9%, rgba(255, 255, 255, 0) 60%);
+}
+
+.cta1{
+    padding: 1rem 4rem;
+    margin: 1rem 0;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #262626;
+}
+footer .logo{
+    flex-direction: column;
+    display: flex;
+    color: white;
+    padding: 1rem;
+}
+
+footer .logo h1{
+    font-size: 3rem;
+}
+
+footer .icon-sosmed{
+    margin: 1rem 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+footer .icon-sosmed a{
+    color: #fff;
+    font-size: 1.5rem;
+}
+footer .links{
+    display: flex;
+    gap: 5rem;
+    padding: 2rem;
+}
+footer .links a{
+    font-weight: 700;
+    color: white;
+}
+
+/*Media Queries*/
+
+
+@media (max-width: 1000px){
+    .nav .navbar-brand{
+        font-size: 2rem;
+    }
+
+    .nav .navbar-nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        top: 3.5rem;
+        text-align: center;
+        left: -100%;
+        transition: 0.5s ease-out;
+    }
+
+    .nav .navbar-nav.active{
+        left: 0;
+        width: 100%;
+        margin: 0.5rem auto;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    #hamburger-menu{
+        display: inline-block;
+    }
+
+    .home .home-title .title{
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .home .home-title .title .text-title{
+        margin-bottom: 1rem;
+    }
+    .home .home-title .title .sub-text{
+        margin-bottom: 1rem;
+    }
+
+    .cta{
+        padding: 1rem 3rem;
+        margin: 0 1rem;
+        display: flex;
+        align-items: center;
+        background-color: rgb(51, 51, 51);
+        color: white;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .home-featured{
+        padding: 4rem;
+        margin: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .home-featured .featured-header{
+        color: white;
+        margin: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .home-featured .img-featured{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .home-featured .img-featured .featured{
+        width: 250px;
+        height: 250px;
+        padding: 0.5rem;
+    }
+    
+    .home-featured .featured-title{
+        color: white;
+        padding: 1rem;
+        position: absolute; 
+        bottom: 0; 
+        left: 0;
+    }
+    .about-card{
+        padding: 5rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-card .about-card-left{
+        display: flex;
+        justify-content: center;
+    }
+    .about-card .about-card-left .about-img{
+        width: 250px;
+    }
+    .about-card .about-card-right{
+        font-size: 1rem;
+    }
+    .about-card .about-card-right .about-title{
+        color: white;
+        font-weight: 500;
+    }
+
+    .explore-card .img-explore{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .explore-card .img-explore .featured-explore{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .explore-card .img-explore .explore-shadow{
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        height: 40%;
+        background: linear-gradient(0deg, rgba(1, 1, 3, 1) 9%, rgba(255, 255, 255, 0) 60%);
+    }
+    
+    .explore-card .img-explore .explore-shadow-top{
+        position: absolute;
+        top: 0;
+        width: 300px;
+        height: 50%;
+        background: linear-gradient(180deg, rgba(1, 1, 3, 1) 9%, rgba(255, 255, 255, 0) 60%);
+    }
+
+    .explore-card .featured-title{
+        color: white;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        position: absolute; 
+        bottom: 0;
+    }
+    .contact-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-card .contact-left .title-contact{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .contact-card .contact-left .text-contact{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+
+    .contact-card .contact-right{
+        margin: 1rem;
+    }
+
+    .contact-card .contact-right .contact-img{
+        width: 300px;
+    }
+    .contact-card .contact-left form{
+        margin: auto;
+    }
+    
+    .contact-card .contact-left form input{
+        border: none;
+        outline: none;
+        background: #262626;
+        padding: 15px;
+        margin: 15px 0;
+        color: #fff;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #262626;
+    }
+    footer .logo{
+        flex-direction: column;
+        display: flex;
+        color: white;
+        padding: 1rem;
+    }
+
+    footer .logo h1{
+        font-size: 2rem;
+    }
+
+
+    footer .icon-sosmed{
+        margin: 1rem 0 1rem;
+        display: flex;
+        gap: 1rem;
+    }
+    footer .icon-sosmed a{
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    footer .links{
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: 1rem;
+    }
+    footer .links a{
+        color: white;
+        font-weight: 600;
+    }
+}
